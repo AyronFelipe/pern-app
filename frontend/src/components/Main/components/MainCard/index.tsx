@@ -1,19 +1,27 @@
+/* eslint-disable camelcase */
 // eslint-disable-next-line import/no-extraneous-dependencies
 import DOMPurify from 'dompurify';
 
+import { ExternalLinkIcon } from '@chakra-ui/icons';
 import {
+  Button,
+  ButtonGroup,
   Card,
   CardBody,
+  CardFooter,
   Center,
   Divider,
+  Flex,
   Heading,
   Image,
+  Link,
   Stack,
+  Tag,
   Text,
 } from '@chakra-ui/react';
 
 import { New } from '../../../../data/news';
-import truncateText from '../../../../utils';
+import { formatDateString, truncateText } from '../../../../utils';
 
 type IMainCard = {
   item: New;
@@ -22,7 +30,7 @@ type IMainCard = {
 function MainCard(props: IMainCard) {
   const { item } = props;
 
-  const { id, titulo, conteudo, thumbnail } = item;
+  const { id, titulo, conteudo, thumbnail, url, data_hora_publicacao } = item;
 
   return (
     <Card maxW="xl" key={id}>
@@ -34,12 +42,36 @@ function MainCard(props: IMainCard) {
           <Heading size="md">{titulo}</Heading>
           <Divider />
           <Text
+            textAlign="justify"
             dangerouslySetInnerHTML={{
               __html: DOMPurify.sanitize(truncateText(conteudo, 230)),
             }}
           />
+          <Flex justifyContent="end">
+            <Tag size="md" key="md">
+              {formatDateString(data_hora_publicacao)}
+            </Tag>
+          </Flex>
         </Stack>
       </CardBody>
+      <Divider />
+      <CardFooter>
+        <ButtonGroup>
+          <Button
+            as={Link}
+            variant="solid"
+            bg="blue.500"
+            color="white"
+            href={url}
+            isExternal
+          >
+            Link externo <ExternalLinkIcon mx="2px" />
+          </Button>
+          <Button variant="solid" bg="blue.700" color="white">
+            Ler notícia
+          </Button>
+        </ButtonGroup>
+      </CardFooter>
     </Card>
   );
 }
