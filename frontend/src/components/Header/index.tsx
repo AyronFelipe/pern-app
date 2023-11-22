@@ -39,7 +39,6 @@ function Header() {
           </MenuButton>
           <MenuList>
             <MenuItem color="black">Início</MenuItem>
-            <MenuItem color="black">Notícias</MenuItem>
             <MenuItem color="black">Sobre</MenuItem>
           </MenuList>
         </Menu>
@@ -58,14 +57,6 @@ function Header() {
           fontWeight="bold"
         >
           Início
-        </Text>
-        <Text
-          mr={4}
-          cursor="pointer"
-          _hover={{ color: 'gray.300' }}
-          fontWeight="bold"
-        >
-          Notícias
         </Text>
         <Text
           mr={4}

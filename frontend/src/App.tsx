@@ -1,23 +1,13 @@
-import { Box, Flex, Text } from '@chakra-ui/react';
+import { Box } from '@chakra-ui/react';
 
 import Header from './components/Header';
-
-const textFontSizes = [16, 18, 24, 30];
+import Main from './components/Main';
 
 function App(): JSX.Element {
   return (
-    <Box>
+    <Box bg="gray.50">
       <Header />
-      <Flex
-        as="header"
-        direction="column"
-        alignItems="center"
-        justifyContent="center"
-        h="100vh"
-        fontSize="3xl"
-      >
-        <Text fontSize={textFontSizes}>Hello World!</Text>
-      </Flex>
+      <Main />
     </Box>
   );
 }

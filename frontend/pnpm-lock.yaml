@@ -17,6 +17,9 @@ dependencies:
   '@emotion/styled':
     specifier: ^11.8.1
     version: 11.11.0(@emotion/react@11.11.1)(@types/react@18.2.38)(react@18.2.0)
+  dompurify:
+    specifier: ^3.0.6
+    version: 3.0.6
   framer-motion:
     specifier: ^8.5.2
     version: 8.5.5(react-dom@18.2.0)(react@18.2.0)
@@ -37,6 +40,9 @@ devDependencies:
   '@testing-library/react':
     specifier: ^13.4.0
     version: 13.4.0(react-dom@18.2.0)(react@18.2.0)
+  '@types/dompurify':
+    specifier: ^3.0.5
+    version: 3.0.5
   '@types/jest':
     specifier: ^29.2.6
     version: 29.5.10
@@ -2379,6 +2385,12 @@ packages:
       '@babel/types': 7.23.4
     dev: true
 
+  /@types/dompurify@3.0.5:
+    resolution: {integrity: sha512-1Wg0g3BtQF7sSb27fJQAKck1HECM6zV1EB66j8JH9i3LCjYabJa0FSdiSgsD5K/RbrsR0SiraKacLB+T8ZVYAg==}
+    dependencies:
+      '@types/trusted-types': 2.0.7
+    dev: true
+
   /@types/graceful-fs@4.1.9:
     resolution: {integrity: sha512-olP3sd1qOEe5dXTSaFvQG+02VdRXcdytWLAZsAq1PecU8uqQAhkrnbli7DagjtXKW/Bl7YJbUsa8MPcuc8LHEQ==}
     dependencies:
@@ -2467,6 +2479,10 @@ packages:
     resolution: {integrity: sha512-FSYhIjFlfOpGSRyVoMBMuS3ws5ehFQODymf3vlI7U1K8c7PHwWwFY7VREfmsuzHSOnoKs/9/Y983ayOs7eRzqw==}
     dependencies:
       '@types/jest': 29.5.10
+    dev: true
+
+  /@types/trusted-types@2.0.7:
+    resolution: {integrity: sha512-ScaPdn1dQczgbl0QFTeTOmVHFULt394XJgOQNoyVhZ6r2vLnMLJfBPd53SB52T/3G36VI1/g2MZaX0cwDuXsfw==}
     dev: true
 
   /@types/yargs-parser@21.0.3:
@@ -3276,6 +3292,10 @@ packages:
   /dom-accessibility-api@0.5.16:
     resolution: {integrity: sha512-X7BJ2yElsnOJ30pZF4uIIDfBEVgF4XEBxL9Bxhy6dnrm5hkzqmsWHGTiHqRiITNhMyFLyAiWndIJP7Z1NTteDg==}
     dev: true
+
+  /dompurify@3.0.6:
+    resolution: {integrity: sha512-ilkD8YEnnGh1zJ240uJsW7AzE+2qpbOUYjacomn3AvJ6J4JhKGSZ2nh4wUIXPZrEPppaCLx5jFe8T89Rk8tQ7w==}
+    dev: false
 
   /electron-to-chromium@1.4.590:
     resolution: {integrity: sha512-hohItzsQcG7/FBsviCYMtQwUSWvVF7NVqPOnJCErWsAshsP/CR2LAXdmq276RbESNdhxiAq5/vRo1g2pxGXVww==}
