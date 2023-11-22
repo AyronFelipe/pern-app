@@ -1,0 +1,17 @@
+FROM node:20-slim
+
+WORKDIR /app
+
+RUN useradd appuser && chown appuser ./
+
+COPY --chown=appuser pnpm-lock.yaml package.json ./
+
+RUN npm install -g pnpm
+
+RUN pnpm install --frozen-lockfile
+
+COPY --chown=appuser . ./
+
+USER appuser
+
+CMD [ "./scripts/start-development.sh" ]
