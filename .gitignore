@@ -161,3 +161,12 @@ dist
 .ionide
 
 # End of https://www.toptal.com/developers/gitignore/api/node,visualstudiocode
+
+node_modules
+.DS_Store
+dist
+dist-ssr
+*.local
+coverage
+.env
+build
