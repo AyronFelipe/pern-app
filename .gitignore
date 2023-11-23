@@ -170,3 +170,4 @@ dist-ssr
 coverage
 .env
 build
+.pnpm-store

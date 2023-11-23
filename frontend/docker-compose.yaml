@@ -12,3 +12,13 @@ services:
       - /app/node_modules
     ports:
       - '3001:3001'
+
+  unit-tests:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    env_file: .env
+    working_dir: /app
+    volumes:
+      - .:/app
+    command: [ "./scripts/start-tests.sh" ]
