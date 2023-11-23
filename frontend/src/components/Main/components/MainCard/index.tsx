@@ -1,6 +1,8 @@
+/* eslint-disable import/no-extraneous-dependencies */
 /* eslint-disable camelcase */
 // eslint-disable-next-line import/no-extraneous-dependencies
 import DOMPurify from 'dompurify';
+import { Link as ReactRouterLink } from 'react-router-dom';
 
 import { ExternalLinkIcon } from '@chakra-ui/icons';
 import {
@@ -67,7 +69,13 @@ function MainCard(props: IMainCard) {
           >
             Link externo <ExternalLinkIcon mx="2px" />
           </Button>
-          <Button variant="solid" bg="blue.700" color="white">
+          <Button
+            variant="solid"
+            bg="blue.700"
+            color="white"
+            as={ReactRouterLink}
+            to={`/${id}`}
+          >
             Ler notícia
           </Button>
         </ButtonGroup>
