@@ -1,0 +1,15 @@
+FROM node:20-slim
+
+WORKDIR /app
+
+COPY pnpm-lock.yaml package.json ./
+
+RUN npm install -g pnpm
+
+RUN pnpm install --frozen-lockfile
+
+COPY . ./
+
+EXPOSE 3001
+
+CMD [ "./scripts/start-development.sh" ]
