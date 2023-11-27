@@ -34,9 +34,9 @@ function NewsProvider({ children }: NewsProviderProps) {
     getNews();
   }, []);
 
-  const foo = useMemo(() => ({ news, setNews }), [news]);
+  const newsMemo = useMemo(() => ({ news, setNews }), [news]);
 
-  return <NewsContext.Provider value={foo}>{children}</NewsContext.Provider>;
+  return <NewsContext.Provider value={newsMemo}>{children}</NewsContext.Provider>;
 }
 
 function useNewsContext(): NewsContextType {
